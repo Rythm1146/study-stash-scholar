@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,37 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				brand: {
+					50: '#f0f4ff',
+					100: '#dde6ff',
+					200: '#c3d4ff',
+					300: '#9eb8ff',
+					400: '#7792ff',
+					500: '#5568fd',
+					600: '#3a3ef4',
+					700: '#342fde',
+					800: '#2a27b4',
+					900: '#282991',
+					950: '#181655',
+				},
+				accent: {
+					50: '#fbf5eb',
+					100: '#f6e9d2',
+					200: '#ecd1a6',
+					300: '#e3b16f',
+					400: '#dd9442',
+					500: '#d6782f',
+					600: '#c65d25',
+					700: '#a44221',
+					800: '#843523',
+					900: '#6d2e1f',
+					950: '#3f150d',
+				},
+			},
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+				serif: ['"Playfair Display"', 'serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -70,25 +101,27 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' },
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
-				}
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' },
+				},
+				'fade-in': {
+					'0%': { opacity: '0', transform: 'translateY(10px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' },
+				},
+				'fade-out': {
+					'0%': { opacity: '1', transform: 'translateY(0)' },
+					'100%': { opacity: '0', transform: 'translateY(10px)' },
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.3s ease-out',
+				'fade-out': 'fade-out 0.3s ease-out',
 			}
 		}
 	},
